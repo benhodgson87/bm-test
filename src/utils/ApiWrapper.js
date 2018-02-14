@@ -9,7 +9,7 @@ export const get = path => {
     .get(API_PATH + path)
     .then(resp => {
       store.dispatch({ type: REDUX_SPINNER_ACTION, [pendingTask]: end })
-      return resp
+      return resp.data
     })
     .catch(err => {
       store.dispatch({ type: REDUX_SPINNER_ACTION, [pendingTask]: end })

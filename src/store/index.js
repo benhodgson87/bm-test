@@ -2,7 +2,10 @@ import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { pendingTasksReducer } from 'react-redux-spinner'
 
+import jobsReducer from './jobs/reducer'
+
 const rootReducer = combineReducers({
+  jobs: jobsReducer,
   pendingTasks: pendingTasksReducer,
 })
 

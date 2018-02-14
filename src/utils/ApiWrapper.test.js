@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { get, post } from './ApiWrapper'
+import { get, post } from './apiWrapper'
 
 jest.mock('axios', () => ({
   get: jest.fn(),
@@ -7,19 +7,21 @@ jest.mock('axios', () => ({
 }))
 
 const fakeJobs = {
-  data: [
-    {
-      id: 123,
-      customer: {
-        title: 'Mr',
-        first_name: 'Foo',
-        last_name: 'Bar',
+  data: {
+    data: [
+      {
+        id: 123,
+        customer: {
+          title: 'Mr',
+          first_name: 'Foo',
+          last_name: 'Bar',
+        },
+        job: {
+          dimensions: 1234,
+        },
       },
-      job: {
-        dimensions: 1234,
-      },
-    },
-  ],
+    ],
+  },
 }
 
 describe('Campaign Service', () => {
@@ -32,7 +34,7 @@ describe('Campaign Service', () => {
 
     return get('/get').then(resp => {
       expect(axios.get).toHaveBeenCalled()
-      expect(resp).toEqual(fakeJobs)
+      expect(resp).toEqual(fakeJobs.data)
     })
   })
 
