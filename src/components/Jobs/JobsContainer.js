@@ -7,12 +7,14 @@ import Jobs from './Jobs'
 
 export class JobsContainer extends Component {
   static propTypes = {
+    isPending: PropTypes.bool,
     jobListings: PropTypes.arrayOf(PropTypes.object),
     getCurrentJobs: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
     jobListings: [],
+    isPending: false,
   }
 
   componentWillMount() {
@@ -21,13 +23,14 @@ export class JobsContainer extends Component {
   }
 
   render() {
-    const { jobListings } = this.props
-    return <Jobs items={jobListings} />
+    const { jobListings, isPending } = this.props
+    return <Jobs items={jobListings} pending={isPending} />
   }
 }
 
 export const mapStateToProps = ({ jobs }) => ({
   jobListings: jobs.data,
+  isPending: jobs.pending,
 })
 
 export const mapDispatchToProps = dispatch => ({

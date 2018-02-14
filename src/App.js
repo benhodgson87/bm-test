@@ -3,6 +3,8 @@ import { Provider } from 'react-redux'
 import { Spinner } from 'react-redux-spinner'
 import store from './store'
 
+import './App.css'
+
 import Jobs from './components/Jobs'
 
 const App = () => (

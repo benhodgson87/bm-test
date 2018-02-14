@@ -17,7 +17,7 @@ class JobActionsContainer extends Component {
 
   handleDelete(id) {
     const { deleteById } = this.props
-    const isConfirmed = window.confirm('Are you sure you want to delete this record?')
+    const isConfirmed = window.confirm('Are you sure you want to delete this record?') // eslint-disable-line no-alert
     if (isConfirmed) deleteById(id)
   }
 
