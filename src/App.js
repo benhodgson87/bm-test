@@ -1,11 +1,16 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-
+import { Spinner } from 'react-redux-spinner'
 import store from './store'
+
+import Jobs from './components/Jobs'
 
 const App = () => (
   <Provider store={store}>
-    <div>Hello BuzzMove</div>
+    <div>
+      <Spinner />
+      <Jobs />
+    </div>
   </Provider>
 )
 
