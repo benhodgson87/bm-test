@@ -7,7 +7,12 @@ import Jobs from './Jobs'
 
 export class JobsContainer extends Component {
   static propTypes = {
+    jobListings: PropTypes.arrayOf(PropTypes.object),
     getCurrentJobs: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    jobListings: [],
   }
 
   componentWillMount() {
@@ -16,12 +21,13 @@ export class JobsContainer extends Component {
   }
 
   render() {
-    return <Jobs />
+    const { jobListings } = this.props
+    return <Jobs items={jobListings} />
   }
 }
 
 export const mapStateToProps = ({ jobs }) => ({
-  jobs: jobs.data,
+  jobListings: jobs.data,
 })
 
 export const mapDispatchToProps = dispatch => ({

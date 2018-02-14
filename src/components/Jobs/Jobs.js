@@ -1,14 +1,24 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 import JobItem from '../JobItem'
 
-const Jobs = () => (
+const Jobs = ({ items }) => (
   <div>
-    <JobItem name="Ben Hodgson" dimensions={123} />
-    <JobItem name="Ben Smith" dimensions={123} />
-    <JobItem name="Ben Johnson" dimensions={123} />
+    {items.length < 1 && <div>No items to display</div>}
+    {items.map(item => (
+      <JobItem
+        key={item.id}
+        id={item.id}
+        customer={item.customer}
+        dimensions={item.job.dimensions}
+      />
+    ))}
   </div>
 )
+
+Jobs.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default Jobs

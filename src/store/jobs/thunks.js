@@ -1,5 +1,5 @@
-import { get } from '../../utils/apiWrapper'
-import { jobRetrievePending, jobRetrieveSuccess, jobRetrieveFail } from './actions'
+import { get, post } from '../../utils/apiWrapper'
+import { jobRetrievePending, jobRetrieveSuccess, jobRetrieveFail, jobDelete } from './actions'
 
 export const getJobListing = () => dispatch => {
   dispatch(jobRetrievePending())
@@ -11,3 +11,12 @@ export const getJobListing = () => dispatch => {
       dispatch(jobRetrieveFail())
     })
 }
+
+export const deleteJob = id => dispatch =>
+  post('/delete')
+    .then(() => {
+      dispatch(jobDelete(id))
+    })
+    .catch(() => {
+      console.error('Handle failed deletes, eg. flash an error')
+    })
