@@ -5,13 +5,16 @@ import store from './store'
 
 import './App.css'
 
-import Jobs from './components/Jobs'
+import Surveys from './views/Surveys'
 
 const App = () => (
   <Provider store={store}>
     <div>
       <Spinner />
-      <Jobs />
+
+      {/* Normally the react-router wrapper would go here, but as it's a single page, we can embed
+        the view directly and pretend there's routing happening */}
+      <Surveys />
     </div>
   </Provider>
 )

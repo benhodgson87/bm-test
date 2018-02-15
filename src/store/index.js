@@ -3,9 +3,11 @@ import thunk from 'redux-thunk'
 import { pendingTasksReducer } from 'react-redux-spinner'
 
 import jobsReducer from './jobs/reducer'
+import sortingReducer from './sorting/reducer'
 
 const rootReducer = combineReducers({
   jobs: jobsReducer,
+  sorting: sortingReducer,
   pendingTasks: pendingTasksReducer,
 })
 

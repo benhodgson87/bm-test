@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import deepSort from 'deep-sort'
 import { connect } from 'react-redux'
 import { getJobListing } from '../../store/jobs/thunks'
 
@@ -7,14 +8,17 @@ import Jobs from './Jobs'
 
 export class JobsContainer extends Component {
   static propTypes = {
-    isPending: PropTypes.bool,
+    isPending: PropTypes.bool.isRequired,
     jobListings: PropTypes.arrayOf(PropTypes.object),
+    sortBy: PropTypes.shape({
+      by: PropTypes.string,
+      order: PropTypes.string,
+    }).isRequired,
     getCurrentJobs: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
     jobListings: [],
-    isPending: false,
   }
 
   componentWillMount() {
@@ -23,14 +27,15 @@ export class JobsContainer extends Component {
   }
 
   render() {
-    const { jobListings, isPending } = this.props
-    return <Jobs items={jobListings} pending={isPending} />
+    const { jobListings, isPending, sortBy: { key, order } } = this.props
+    return <Jobs items={deepSort(jobListings, key, order)} pending={isPending} />
   }
 }
 
-export const mapStateToProps = ({ jobs }) => ({
+export const mapStateToProps = ({ jobs, sorting }) => ({
   jobListings: jobs.data,
   isPending: jobs.pending,
+  sortBy: sorting,
 })
 
 export const mapDispatchToProps = dispatch => ({
