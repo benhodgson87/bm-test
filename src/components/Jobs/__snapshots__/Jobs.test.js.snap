@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jobs presentational component renders as expected 1`] = `
+<div
+  className="jobs-list"
+>
+  <JobItem
+    customer={
+      Object {
+        "first_name": "Wayne",
+        "last_name": "World",
+        "title": "Mr",
+      }
+    }
+    dimensions={234}
+    id={123}
+    key="123"
+  />
+</div>
+`;

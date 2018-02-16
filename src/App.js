@@ -1,9 +1,9 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { Spinner } from 'react-redux-spinner'
-import { Grid } from 'react-flexbox-grid'
 import store from './store'
 
+import 'react-redux-spinner/dist/react-redux-spinner.css'
 import './BootstrapCustom.css'
 import './App.css'
 

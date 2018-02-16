@@ -6,11 +6,11 @@ import { Alert } from 'react-bootstrap'
 import JobItem from '../JobItem'
 
 const Jobs = ({ pending, items }) => (
-  <div>
-    {pending && <Row>Loading</Row>}
+  <div className="jobs-list">
+    {pending && <Row className="jobs-list-isLoading">Loading</Row>}
     {!pending &&
       items.length < 1 && (
-        <Row>
+        <Row className="jobs-list-isEmpty">
           <Alert bsStyle="warning">No items to display</Alert>
         </Row>
       )}

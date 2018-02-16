@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader component renders correctly 1`] = `
+<Row
+  className="main-header"
+>
+  <Col
+    className="main-header-add"
+    xs={12}
+  >
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="primary"
+      disabled={false}
+    >
+      Add New
+    </Button>
+  </Col>
+</Row>
+`;

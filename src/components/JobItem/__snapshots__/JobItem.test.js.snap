@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobItem component renders as expected 1`] = `
+<Row
+  className="job-item"
+>
+  <Col
+    className="job-item-section"
+    xs={5}
+  >
+    Mr
+     
+    Wayne
+     
+    World
+  </Col>
+  <Col
+    className="job-item-section"
+    xs={3}
+  >
+    <strong>
+      234
+    </strong>
+    ft³
+  </Col>
+  <Col
+    className="job-item-section"
+    xs={2}
+  >
+    <Label
+      bsClass="label"
+      bsStyle="primary"
+    >
+      Cube Job
+    </Label>
+  </Col>
+  <Col
+    className="job-item-section"
+    xs={2}
+  >
+    <Connect(JobActionsContainer)
+      id={123}
+    />
+  </Col>
+</Row>
+`;

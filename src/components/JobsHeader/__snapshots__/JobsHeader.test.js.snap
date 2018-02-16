@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobsHeader component renders correctly 1`] = `
+<Row
+  className="jobs-header"
+>
+  <Col
+    xs={8}
+  >
+    <h2>
+      Tasks
+    </h2>
+  </Col>
+  <Col
+    xs={2}
+  />
+  <Col
+    xs={2}
+  >
+    <Connect(JobSortingContainer) />
+  </Col>
+</Row>
+`;
