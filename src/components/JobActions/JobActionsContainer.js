@@ -5,7 +5,7 @@ import { deleteJob } from '../../store/jobs/thunks'
 
 import JobActions from './JobActions'
 
-class JobActionsContainer extends Component {
+export class JobActionsContainer extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
     deleteById: PropTypes.func.isRequired,
@@ -33,7 +33,7 @@ class JobActionsContainer extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   deleteById: id => dispatch(deleteJob(id)),
 })
 

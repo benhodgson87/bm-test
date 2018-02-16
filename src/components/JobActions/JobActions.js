@@ -4,10 +4,10 @@ import { DropdownButton, MenuItem } from 'react-bootstrap'
 
 const JobActions = ({ id, handleEdit, handleDelete }) => (
   <DropdownButton bsStyle="primary" title="Actions" className="job-actions-handle">
-    <MenuItem eventKey="1" onClick={() => handleEdit(id)}>
+    <MenuItem eventKey="1" onClick={() => handleEdit(id)} className="job-actions-edit">
       Edit
     </MenuItem>
-    <MenuItem eventKey="2" onClick={() => handleDelete(id)}>
+    <MenuItem eventKey="2" onClick={() => handleDelete(id)} className="job-actions-delete">
       Delete
     </MenuItem>
   </DropdownButton>
