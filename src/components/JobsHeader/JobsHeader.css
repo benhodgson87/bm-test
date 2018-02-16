@@ -1,0 +1,13 @@
+.jobs-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 4px;
+  background-color: #fff;
+}
+
+.jobs-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #2673b4;
+}

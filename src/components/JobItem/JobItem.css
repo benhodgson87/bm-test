@@ -1,0 +1,18 @@
+.job-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-left: 5px solid #2673b4;
+  background-color: #fff;
+
+  &:hover {
+    border-width: 1px 1px 1px 5px;
+    border-color: #2673b4;
+    background-color: #e9f2f8;
+  }
+}
+
+.job-item:not(:last-of-type) {
+  margin-bottom: 4px;
+}

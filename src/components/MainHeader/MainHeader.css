@@ -1,0 +1,10 @@
+.main-header {
+  margin-bottom: 4px;
+  background-color: #fff;
+}
+
+.main-header-add {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}

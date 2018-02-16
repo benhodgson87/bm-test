@@ -1,0 +1,60 @@
+/**
+ * Alert Style Overrides
+ */
+
+.alert {
+  flex: 1;
+}
+
+
+/**
+ * Button Style Overrides
+ */
+
+.btn {
+  border-radius: 50px;
+  border-width: 2px;
+}
+
+.btn-default {
+  border-color: #a3a3a3;
+  color: #a3a3a3;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: #a3a3a3;
+    background-color: #a3a3a3;
+    color: #fff;
+  }
+}
+
+.open > .dropdown-toggle.btn-default:active,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+  border-color: #a3a3a3;
+  background-color: #a3a3a3;
+  color: #fff;
+}
+
+.btn-primary {
+  border-color: #f5962e;
+  background-color: transparent;
+  color: #f5962e;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: #f5962e;
+    background-color: #f5962e;
+    color: #fff;
+  }
+}
+
+.open > .dropdown-toggle.btn-primary:active,
+.open > .dropdown-toggle.btn-primary:focus,
+.open > .dropdown-toggle.btn-primary:hover {
+  border-color: #f5962e;
+  background-color: #f5962e;
+  color: #fff;
+}

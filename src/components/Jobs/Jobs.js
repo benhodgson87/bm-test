@@ -1,12 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Row } from 'react-flexbox-grid'
+import { Alert } from 'react-bootstrap'
 
 import JobItem from '../JobItem'
 
 const Jobs = ({ pending, items }) => (
   <div>
-    {pending && <div>Loading</div>}
-    {!pending && items.length < 1 && <div>No items to display</div>}
+    {pending && <Row>Loading</Row>}
+    {!pending &&
+      items.length < 1 && (
+        <Row>
+          <Alert bsStyle="warning">No items to display</Alert>
+        </Row>
+      )}
     {!pending &&
       items.length > 0 &&
       items.map(item => (

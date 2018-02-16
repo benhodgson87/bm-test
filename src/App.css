@@ -1,1 +1,16 @@
-@import '~react-redux-spinner/dist/react-redux-spinner.css'
+@import '~react-redux-spinner/dist/react-redux-spinner.css';
+
+
+body {
+  background-color: #fafafa;
+}
+
+.app {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.app-container {
+  width: 640px;
+}
